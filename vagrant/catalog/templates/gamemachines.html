@@ -1,0 +1,74 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row top-menu">
+		<div class="col-md-10"></div>
+		<div class="col-md-2 text-right">
+					</div>
+	</div>
+	<div class="row divider blue">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner main">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+			<h1>Game Machine Console Libraries</h1>
+		</div>
+	</div>
+
+<div class = 'flash'>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-1"></div>
+		<div class="col-md-10 padding-none">
+			<a href="{{url_for('newGameMachine')}}">
+				<button class="btn btn-default" id="new-game_machine">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add a Library
+				</button>
+			</a>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+	{% for u in users %}
+	<div>
+	<hr>
+	{% if u.name != "" %}
+		<h3>{{u.name}}</h3>
+	{% else %}
+		<h3>Anonymous</h3>
+	{% endif %}
+		<div>
+		{% if game_machines|select("equalto", u.id) %}
+		{% for game_machine in game_machines if u.id == game_machine.user_id %}
+			<a href = "{{url_for('showVGLib', game_machine_id = game_machine.id)}}">
+				<div class="row">
+					<div class="col-md-1"></div>
+						<div class="col-md-10 game_machine-list">
+							<h3>{{game_machine.manufacturer}} {{game_machine.name}}</h3>
+						</div>
+					<div class="col-md-1"></div>
+				</div>
+			</a>
+		{% endfor %}
+		{% else %}
+			<div>
+			<h3>No machines entered at this time</h3>
+			</div>
+		{% endif %}
+		</div>
+	</div>
+	{% endfor %}
+{% endblock %}
