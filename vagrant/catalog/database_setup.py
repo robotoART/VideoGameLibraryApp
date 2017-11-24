@@ -13,6 +13,7 @@ class User(Base):
     name = Column(String(250), nullable=False)
     email = Column(String(250), nullable=False)
     picture = Column(String(250))
+    game_machine = relationship('GameMachine', cascade='all, delete-orphan')
 
 
 class GameMachine(Base):
@@ -23,6 +24,7 @@ class GameMachine(Base):
     manufacturer = Column(String(80), nullable=False)
     user_id = Column(Integer,ForeignKey('user.id'))
     user = relationship(User)
+    video_game = relationship('VideoGame', cascade='all, delete-orphan')
 
     @property
     def serialize(self):
