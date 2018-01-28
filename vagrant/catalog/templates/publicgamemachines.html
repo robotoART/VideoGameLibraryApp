@@ -33,16 +33,14 @@
 
     {% for u in users %}
     <div>
-    <hr>
     {% if u.name != "" %}
-        <h3>{{u.name}}</h3>
+        <h3><u>{{u.name}}</u></h3>
     {% else %}
         <h3>Anonymous</h3>
     {% endif %}
-        <div class="row padding-top padding-bottom">
+        <div class="padding-top">
             <div class="col-md-1"></div>
             <div class="col-md-10 padding-none">
-
             </div>
             <div class="col-md-1"></div>
         {% if game_machines|select("equalto", u.id) %}
@@ -64,5 +62,6 @@
         {% endif %}
         </div>
     </div>
+    <hr>
     {% endfor %}
 {% endblock %}

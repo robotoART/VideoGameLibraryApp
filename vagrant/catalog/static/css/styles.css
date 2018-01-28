@@ -1,28 +1,50 @@
-body            { font-family: sans-serif;
-    background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    background-image: url('../images/vg-nintendo-characters-2560-1600.jpg');
-    background-color: #333333;
-    background: linear-gradient(red, yellow,);}
- h1, h2, h3, h4       { color: #CCCCCC; }
-h1, h2          { font-family: 'Georgia', serif; margin: 0; }
+body { font-family: Arial;
+    background: linear-gradient(red, yellow,);
+    background-repeat: no-repeat;
+    background-color: #333;
+    -webkit-background-size: 100%;
+         -o-background-size: 100%;
+            background-size: 100%;
+    }
+h1, h2, h3, h4  { color: #CCC; }
+h1, h2          { font-family: 'Arial Black', serif; margin: 0; }
 h1              { border-bottom: 2px solid #eee; }
 h2              { font-size: 1.2em; }
 
-p               { color: #CCCCCC;}
+p { color: #CCCCCC;}
 
-a {text-decoration: none; color:#FFFFCC; font-size: .75em;}
+a {
+    text-decoration: none;
+    color:#FFFFCC;
+    font-size: .75em;
+    }
 
-.pane {position:absolute; left: 25%; border: 2px solid;
-    border-radius: 25px; padding: 5px; margin: 5px; border-color: #999999; background-color: #333333; }
-.header         {left:50%; text-align: center;}
-.name {width:50%;display: inline-block; float: left;}
-.description {}
-.price {text-align: right; width:50%; float: right; }
-.editdeletepane{}
+.pane {
+    position:absolute;
+    left: 25%;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 5px;
+    border-color: #999999;
+    background-color: #333333;
+    }
 
-.flash          { background: #cee5F5; }
+.header {
+    left:50%;
+    text-align: center;
+    }
 
+.name {
+    width:50%;
+    display: inline-block;
+    float: left;
+    }
 
+.price {
+    text-align: right;
+    width:50%;
+    float: right;
+    }
 
+.flash { background: #cee5F5; }

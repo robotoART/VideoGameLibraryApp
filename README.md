@@ -8,7 +8,6 @@ Using a basic sample Item Catalog project from Udacity's GitHub pages learn the 
 
 # Requirements to Run Application
 ## Install the Vagrant VM
-
 ### Git
 
 If you don't already have Git installed, [download Git from git-scm.com.](http://git-scm.com/downloads) Install the version for your operating system.
@@ -56,10 +55,6 @@ Now that you have Vagrant up and running type **vagrant ssh** to log into your V
 
 Type **ls** to ensure that you are inside the directory that contains project.py, database_setup.py, and two directories named 'templates' and 'static'
 
-Now type **python database_setup.py** to initialize the database.
-
-Type **python sampleitems.py** to populate the database with restaurants and menu items. (Optional)
-
 Type **python application.py** to run the Flask web server. In your browser visit **http://localhost:5000** to view the restaurant menu app.  You should be able to view, add, edit, and delete menu items and restaurants.
 
 To stop running the local Flask web server switch to your terminal and hit the "control+C" keys.
@@ -69,3 +64,10 @@ To log out of the VM after stopping the Flask web server, type:
     exit
 
 Now you can shutdown/(turn off) the virtual machine safely.
+
+#### Starting with an empty database
+If you want to start with a fresh empty database, you will have to delete the database file named **"videogamelibrary.db"** found in **/vagrant/catalog** folder.
+
+Then type and run **python database_setup.py** to create the empty database named **"videogamelibrary.db"**.
+
+If you ever want to use the sample database items, just run the **sampleitems.py** file while in **/vagrant/catalog** folder.
