@@ -4,7 +4,7 @@ by robotoART
 ### Objective of this sample application
 Using a basic sample Item Catalog project from Udacity's GitHub pages learn the fundamentals of the Backend to a Web application. Discover how to setup a Python database, a Flask framework, JSON endpoints, OAuth authorization, using CRUD, Agile and iterative principles.
 
-**Udacity's sample project:** The example project used as a guide for my Video Game Application example can be found at: https://github.com/udacity/OAuth2.0
+**Udacity's sample project:** The example project used as a guide for my Video Game Library Application example can be found at: https://github.com/udacity/OAuth2.0
 
 # Requirements to Run Application
 ## Install the Vagrant VM
